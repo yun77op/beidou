@@ -101,7 +101,7 @@ describe(`test/${path.basename(__filename)}`, () => {
       });
       app.expect('code', 0);
       yield sleep(TIME);
-      console.log('app.stderr', app.stderr)
+      console.log('###app.stderr', app.stderr)
       assert(app.stderr === '');
       assert(
         app.stdout.match(/beidou-core started on http:\/\/127\.0\.0\.1:8080/)
