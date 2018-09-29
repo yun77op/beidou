@@ -109,7 +109,7 @@ describe(`test/${path.basename(__filename)}`, () => {
     });
 
     it('should stop beidou process', function* () {
-      yield sleep(100);
+      yield sleep(50);
       app = coffee.fork(beidouBin, ['start'], {
         cwd: exampleDir,
       });
