@@ -120,7 +120,7 @@ describe(`test/${path.basename(__filename)}`, () => {
         })
         // .expect('stdout', /got master pid \["\d+\"\]/)
         .expect('stdout', /stopping egg application/)
-        .expect('stdout', /stopped/)
+        // .expect('stdout', /stopped/)
         .expect('code', 0)
         .end();
     });
