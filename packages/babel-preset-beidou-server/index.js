@@ -1,7 +1,7 @@
 'use strict';
 
 const env = require('babel-preset-env');
-const stage2 = require('babel-preset-stage-2');
+const classProperties = require('babel-plugin-transform-class-properties');
 const react = require('babel-preset-react');
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
         // debug: true,
       },
     ],
-    stage2,
     react,
   ],
+  plugins: [classProperties]
 };
