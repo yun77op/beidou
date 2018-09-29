@@ -118,7 +118,7 @@ describe(`test/${path.basename(__filename)}`, () => {
         .fork(beidouBin, ['stop'], {
           cwd: exampleDir,
         })
-        // .expect('stdout', /got master pid \["\d+\"/)
+        // .expect('stdout', /got master pid \["\d+\"\]/)
         .expect('stdout', /stopping egg application/)
         .expect('stdout', /stopped/)
         .expect('code', 0)
