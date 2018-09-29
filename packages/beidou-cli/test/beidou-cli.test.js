@@ -109,7 +109,6 @@ describe(`test/${path.basename(__filename)}`, () => {
     });
 
     it('should stop beidou process', function* () {
-      yield sleep(40);
       app = coffee.fork(beidouBin, ['start'], {
         cwd: exampleDir,
       });
@@ -119,7 +118,7 @@ describe(`test/${path.basename(__filename)}`, () => {
         .fork(beidouBin, ['stop'], {
           cwd: exampleDir,
         })
-        .expect('stdout', /got master pid \["\d+\"\]/)
+        .expect('stdout', /got master pid \["\d+\"/)
         .expect('stdout', /stopping egg application/)
         .expect('code', 0)
         .end();
